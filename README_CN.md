@@ -81,9 +81,9 @@
 
 | 稳定币类型 | 代表币种 | 链上透明度 | 典型风险 |
 | --- | --- | --- | --- |
-| 法币抵押型 | USDT、USDC、FDUSD | 低<br><br>（链下依赖审计报告） | 链下进出金形成洗钱断点，需强 KYC 和实时对账；链下账户不透明导致储备风险 |
-| 加密资产抵押型 | DAI、USDe | 高<br><br>（全链上可追踪） | 抵押物可能来自高风险来源（混币、跨链桥）；预言机操纵与清算机制风险 |
-| 算法型 | UST | 中<br><br>（合约规则透明但系统性风险较高） | 易脱锚或陷入死亡螺旋；缺乏链下资产支持，冻结和追踪难度大；常被用于匿名套利交易 |
+| 法币抵押型 | USDT、USDC、FDUSD | 低（链下依赖审计报告） | 链下进出金形成洗钱断点，需强 KYC 和实时对账；链下账户不透明导致储备风险 |
+| 加密资产抵押型 | DAI、USDe | 高（全链上可追踪） | 抵押物可能来自高风险来源（混币、跨链桥）；预言机操纵与清算机制风险 |
+| 算法型 | UST | 中（合约规则透明但系统性风险较高） | 易脱锚或陷入死亡螺旋；缺乏链下资产支持，冻结和追踪难度大；常被用于匿名套利交易 |
 | 混合型 | FRAX、PAXG | 链上 + 链下混合 | 商品抵押型实物托管造假；跨司法辖区合规冲突 |
 
 **（1）法币抵押型**
@@ -411,7 +411,7 @@ DeFi 平台套利及闪电贷操作也是典型的短期资金流洗钱手法。
 | --- | --- |
 | 实体类型 | 是否关联高风险实体（如混币器、受制裁个人、暗网市场） |
 | 威胁情报 | 是否涉及已知的诈骗、黑客攻击、勒索软件或资金盗窃行为 |
-| 交易对手 | 交易对手的风险评分及交互金额占比<br><br>（如与高风险地址交易占比 >50% 则大幅提分） |
+| 交易对手 | 交易对手的风险评分及交互金额占比（如与高风险地址交易占比 >50% 则大幅提分） |
 | 交易行为 | 包括：高频拆分交易、跨链转移突增、与安全事件时间高度吻合 |
 
 当分数超过预设阈值时，系统可自动将其列入“临时黑名单”，并在人工复核或执法确认后转入“永久黑名单”。这样可从“被动阻断”逐步过渡到“主动预警”，但其有效性取决于模型训练质量和情报覆盖范围。
@@ -767,21 +767,21 @@ API 接口与加密传输机制的价值在于，它们将不同系统之间的�
 
 # 参考文献
 
-1\. Financial Action Task Force (FATF). _[The FATF Recommendations](https://www.fatf-gafi.org/content/dam/fatf-gafi/recommendations/FATF%20Recommendations%202012.pdf.coredownload.inline.pdf)_
-2\. Financial Action Task Force (FATF). _[Targeted Update on Implementation of the FATF Standards on Virtual Assets and Virtual Asset Service Providers](https://www.fatf-gafi.org/content/dam/fatf-gafi/recommendations/2025-Targeted-Upate-VA-VASPs.pdf.coredownload.pdf)_
-_3\._ The U.S. Congress. _[Stablecoin Legislation: An Overview of S. 1582, GENIUS Act of 2025](https://www.congress.gov/crs-product/IN12553)_
-4\. European Union. _[Markets in Crypto-Assets Regulation (MiCA)](https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica)_
-5\. MAS. _[Response to Public Consultation on Proposed Regulatory Approach for Stablecoin-related Activities](https://www.mas.gov.sg/-/media/mas-media-library/publications/consultations/pd/2023/response-to-consultation-on-stablecoins-regulation_15aug2023.pdf)_
-6\. MAS. _[Guidelines to MAS Notice FSM‑N27](https://www.mas.gov.sg/-/media/amld-amendments---30-june-2025/guidelines-to-mas-notice-fsm-n27.pdf)_
-7\. FSA. _[Examination of the Regulatory Systems Related to Cryptoassets](https://www.fsa.go.jp/en/news/2025/20250410_2/01.pdf)_
-8\. The Korea Herald. _[가상자산이용자보호법 시행령 국무회의 통과](https://biz.heraldcorp.com/article/3420376)_
-9\. The U.S. Department of Justice. _[Garantex cryptocurrency exchange disrupted in international operation](https://www.justice.gov/usao-edva/pr/garantex-cryptocurrency-exchange-disrupted-international-operation)_
-10\. The U.S. Department of the Treasury’s Office of Foreign Assets Control. _[U.S. Treasury Sanctions Notorious Virtual Currency Mixer Tornado Cash](https://home.treasury.gov/news/press-releases/jy0916)_
-11\. 21 世纪经济报道. [65 亿资金跨境套利：起底虚拟货币非法换汇](https://www.21jingji.com/article/20250714/herald/a339df067d13b0bf9f965fc64d996544.html)
-12\. Cointelegraph. _[Tether blocks $12.3M in USDT tied to suspicious Tron addresses](https://cointelegraph.com/news/tether-freezes-12m-usdt-on-tron)_
-13\. The U.S. Department of the Treasury’s Financial Crimes Enforcement Network. _[FinCEN Finds Cambodia-Based Huione Group to be of Primary Money Laundering Concern, Proposes a Rule to Combat Cyber Scams and Heists](https://www.fincen.gov/news/news-releases/fincen-finds-cambodia-based-huione-group-be-primary-money-laundering-concern)_
-14\. 香港金融管理局(HKMA). [《稳定币条例》](https://www.elegislation.gov.hk/hk/cap656!zh-Hant-HK?INDEX_CS=N)  
-15\. 香港金融管理局(HKMA). [《持牌稳定币发行人监管指引》](https://www.hkma.gov.hk/media/chi/doc/key-functions/ifc/stablecoin-issuers/Guideline_on_supervision_of_licensed_stablecoin_issuers_chi.pdf)  
-16\. 香港金融管理局(HKMA). [《打击洗钱及恐怖分子资金筹集指引（持牌稳定币发行人适用）》](https://www.hkma.gov.hk/media/chi/doc/key-functions/banking-stability/aml-cft/Guideline_on_Anti-Money_Laundering_and_Counter-Financing_of_Terrorism_For_Licensed_Stablecoin_Issuers_chi.pdf)  
-17\. 慢雾(SlowMist). [《区块链加密资产追踪手册》](https://github.com/slowmist/Crypto-Asset-Tracing-Handbook/)
+1\. Financial Action Task Force (FATF). _[The FATF Recommendations](https://www.fatf-gafi.org/content/dam/fatf-gafi/recommendations/FATF%20Recommendations%202012.pdf.coredownload.inline.pdf)_<br>
+2\. Financial Action Task Force (FATF). _[Targeted Update on Implementation of the FATF Standards on Virtual Assets and Virtual Asset Service Providers](https://www.fatf-gafi.org/content/dam/fatf-gafi/recommendations/2025-Targeted-Upate-VA-VASPs.pdf.coredownload.pdf)_<br>
+_3\._ The U.S. Congress. _[Stablecoin Legislation: An Overview of S. 1582, GENIUS Act of 2025](https://www.congress.gov/crs-product/IN12553)_<br>
+4\. European Union. _[Markets in Crypto-Assets Regulation (MiCA)](https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica)_<br>
+5\. MAS. _[Response to Public Consultation on Proposed Regulatory Approach for Stablecoin-related Activities](https://www.mas.gov.sg/-/media/mas-media-library/publications/consultations/pd/2023/response-to-consultation-on-stablecoins-regulation_15aug2023.pdf)_<br>
+6\. MAS. _[Guidelines to MAS Notice FSM‑N27](https://www.mas.gov.sg/-/media/amld-amendments---30-june-2025/guidelines-to-mas-notice-fsm-n27.pdf)_<br>
+7\. FSA. _[Examination of the Regulatory Systems Related to Cryptoassets](https://www.fsa.go.jp/en/news/2025/20250410_2/01.pdf)_<br>
+8\. The Korea Herald. _[가상자산이용자보호법 시행령 국무회의 통과](https://biz.heraldcorp.com/article/3420376)_<br>
+9\. The U.S. Department of Justice. _[Garantex cryptocurrency exchange disrupted in international operation](https://www.justice.gov/usao-edva/pr/garantex-cryptocurrency-exchange-disrupted-international-operation)_<br>
+10\. The U.S. Department of the Treasury’s Office of Foreign Assets Control. _[U.S. Treasury Sanctions Notorious Virtual Currency Mixer Tornado Cash](https://home.treasury.gov/news/press-releases/jy0916)_<br>
+11\. 21 世纪经济报道. [65 亿资金跨境套利：起底虚拟货币非法换汇](https://www.21jingji.com/article/20250714/herald/a339df067d13b0bf9f965fc64d996544.html)<br>
+12\. Cointelegraph. _[Tether blocks $12.3M in USDT tied to suspicious Tron addresses](https://cointelegraph.com/news/tether-freezes-12m-usdt-on-tron)_<br>
+13\. The U.S. Department of the Treasury’s Financial Crimes Enforcement Network. _[FinCEN Finds Cambodia-Based Huione Group to be of Primary Money Laundering Concern, Proposes a Rule to Combat Cyber Scams and Heists](https://www.fincen.gov/news/news-releases/fincen-finds-cambodia-based-huione-group-be-primary-money-laundering-concern)_<br>
+14\. 香港金融管理局(HKMA). [《稳定币条例》](https://www.elegislation.gov.hk/hk/cap656!zh-Hant-HK?INDEX_CS=N)  <br>
+15\. 香港金融管理局(HKMA). [《持牌稳定币发行人监管指引》](https://www.hkma.gov.hk/media/chi/doc/key-functions/ifc/stablecoin-issuers/Guideline_on_supervision_of_licensed_stablecoin_issuers_chi.pdf)  <br>
+16\. 香港金融管理局(HKMA). [《打击洗钱及恐怖分子资金筹集指引（持牌稳定币发行人适用）》](https://www.hkma.gov.hk/media/chi/doc/key-functions/banking-stability/aml-cft/Guideline_on_Anti-Money_Laundering_and_Counter-Financing_of_Terrorism_For_Licensed_Stablecoin_Issuers_chi.pdf)  <br>
+17\. 慢雾(SlowMist). [《区块链加密资产追踪手册》](https://github.com/slowmist/Crypto-Asset-Tracing-Handbook/)<br>
 18\. 慢雾(SlowMist). [《面向香港稳定币发行人的智能合约实施指南》](https://mp.weixin.qq.com/s/3KGxo7PVvNHfcMcc8KCfcw)
