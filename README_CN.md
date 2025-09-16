@@ -516,7 +516,7 @@ GNN 具有独特的拓扑结构处理能力，在部分研究与实践中，GNN 
 
 在技术落地层面，AML 模型的价值只有在实时监控中才能充分发挥。模型必须支持实时或近实时推理，并与交易前、交易后的监控体系相结合。在交易前阶段，系统可以在交易即将发生时计算风险分数，高风险交易可触发尽可能快的阻断或进入人工复核流程；在交易后阶段，系统则持续扫描链上交易网络，寻找新出现的高风险地址或行为模式，并将其动态纳入黑名单与风险库。同时，模型需要建立自学习与反馈闭环，即通过人工审核与执法部门反馈的数据，持续优化参数与特征设计，从而减少误报与漏报，力求实现“越用越准”。
 
-一个实践案例是 MistTrack MCP（<https://mcp.so/server/misttrackmcp/slowmist）> 。用户可以在 Claude、Cursor 等支持 MCP 的客户端中，直接使用自然语言调用 MistTrack 的链上分析 API，实现地址画像、风险评分、交易图谱构建等功能，从而进行区块链资产追踪、风险评估和交易分析。这不仅提升了链上数据分析的效率，也降低了上手门槛。例如，用户可以直接向支持 MCP 的 AI 工具发起请求，例如：“Please track the fund flow between this address and exchanges, with a depth of 2: \[ETH_ADDRESS\]。”AI 工具将自动通过 MistTrack MCP 发起 API 调用，并返回完整且可读性强的分析结果。
+一个实践案例是 MistTrack MCP（<https://mcp.so/server/misttrackmcp/slowmist>） 。用户可以在 Claude、Cursor 等支持 MCP 的客户端中，直接使用自然语言调用 MistTrack 的链上分析 API，实现地址画像、风险评分、交易图谱构建等功能，从而进行区块链资产追踪、风险评估和交易分析。这不仅提升了链上数据分析的效率，也降低了上手门槛。例如，用户可以直接向支持 MCP 的 AI 工具发起请求，例如：“Please track the fund flow between this address and exchanges, with a depth of 2: \[ETH_ADDRESS\]。”AI 工具将自动通过 MistTrack MCP 发起 API 调用，并返回完整且可读性强的分析结果。
 
 ![](./res/15.PNG)
 
